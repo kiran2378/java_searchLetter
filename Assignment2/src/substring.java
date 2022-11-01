@@ -1,21 +1,37 @@
 
-class substring {
+import java.util.Scanner;
 
-	public substring() {
-		// Search Later words in text
-	}
+public class substring1 {
 
-	public static void main(String[] args) {
-	 System.out.println(fetchLaterWordForAnEnteredChar("Hello World!", "r")); //example 1
-	 System.out.println(fetchLaterWordForAnEnteredChar("Hello World!", "o")); //example 2
+	
+public static void main(String[] args) {
+	 Scanner scan = new Scanner(System.in);
+	 String str;
+	 char letter;
 	 
+	  System.out.println("Enter any Sentence : ");
+      str = scan.nextLine();
+      
+      System.out.println("Enter Letter : ");
+      letter = scan.next().charAt(0);
+      
+      int length = str.length();
+      
+      for(int i = 0 ; i<length ; i++)
+    	  
+      {
+	 
+    	  char letter2 = str.charAt(i);
+    	  if (letter == letter2);
+    	  
+    	  {
+    		  System.out.println(str.substring(i+1));
+    		  break;
+    	  }
+	  }
+	 
+	  
 
-	}
-
-	public static String fetchLaterWordForAnEnteredChar(String sentence,String letter) {
-		int firstIndex= sentence.indexOf(letter);
-		return sentence.substring(firstIndex +1);
-		
 	}
 
 }
